@@ -1,0 +1,32 @@
+﻿name: Push Webhook
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Discord webhook
+        env:
+          WEBHOOK_URL: 'https://discord.com/api/webhooks/1504106898671276276/PZhbApbjZNtJ2nRRi-AtS5rpFtF-2oRNZduLPqdmzQFsdKms8snhFyeFvEyTOxlVb6f5'
+          REPO: ${{ github.event.repository.name }}
+          BRANCH: ${{ github.ref_name }}
+          SHA: ${{ github.sha }}
+          ACTOR: ${{ github.actor }}
+          MESSAGE: ${{ github.event.head_commit.message }}
+          URL: ${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}
+          AVATAR: ${{ github.event.sender.avatar_url }}
+        run: |
+          SHORT_SHA="${SHA:0:7}"
+          payload=$(jq -n \
+            --arg actor "$ACTOR" \
+            --arg avatar "$AVATAR" \
+            --arg title "[$REPO:$BRANCH] 1 new commit" \
+            --arg short_sha "$SHORT_SHA" \
+            --arg message "$MESSAGE" \
+            --arg url "$URL" \
+            '{username:"GitHub",avatar_url:"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",embeds:[{color:5814783,author:{name:$actor,icon_url:$avatar},title:$title,url:$url,description:("`" + $short_sha + "` " + $message)}]}')
+          curl -H "Content-Type: application/json" -d "$payload" "$WEBHOOK_URL"

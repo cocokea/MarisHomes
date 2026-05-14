@@ -1,0 +1,50 @@
+name: MarisHomes
+version: '1.0'
+main: dev.maris.homes.MarisHomesPlugin
+api-version: '1.21'
+folia-supported: true
+author: Maris
+libraries:
+  - com.zaxxer:HikariCP:7.0.2
+  - org.xerial:sqlite-jdbc:3.53.0.0
+  - com.mysql:mysql-connector-j:9.7.0
+commands:
+  home:
+    description: Open homes GUI or teleport to a home
+    usage: /home [number]
+    aliases: [homes]
+  sethome:
+    description: Set a home
+    usage: /sethome [number]
+  delhome:
+    description: Delete a home
+    usage: /delhome <number>
+  homeadmin:
+    description: Admin commands for MarisHomes
+    usage: /homeadmin reload
+    permission: marishomes.admin
+permissions:
+  marishomes.admin:
+    description: Allows using MarisHomes admin commands
+    default: op
+  marishomes.1:
+    description: Allows using home slot 1
+    default: true
+  marishomes.2:
+    description: Allows using home slot 2
+    default: true
+  marishomes.3:
+    description: Allows using home slot 3
+    default: true
+  marishomes.4:
+    description: Allows using home slot 4
+    default: true
+  marishomes.5:
+    description: Allows using home slot 5
+    default: true
+  marishomes.6:
+    description: Allows using home slot 6
+    default: true
+  marishomes.7:
+    description: Allows using home slot 7
+    default: true

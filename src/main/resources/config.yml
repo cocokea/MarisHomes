@@ -1,0 +1,48 @@
+# MarisHomes main config
+# storage.type: sqlite or mysql
+storage:
+  type: sqlite
+  sqlite:
+    file: homes.db
+    pool-size: 1
+  mysql:
+    host: localhost
+    port: 3306
+    database: marishomes
+    username: root
+    password: ''
+    useSSL: false
+    pool-size: 10
+    connection-timeout: 30000
+    idle-timeout: 600000
+    max-lifetime: 1800000
+
+homes:
+  max-homes: 7
+  permission-format: 'marishomes.%home%'
+  sethome-loose-number-parser: true
+  # If /sethome abc1 is used and home 1 already exists, plugin will try 2,3,...
+  sethome-auto-next-free-slot: true
+  # Players cannot set homes in these worlds. Case-insensitive.
+  blacklist-worlds:
+    - world_nether
+    - world_the_end
+
+teleport:
+  delay-seconds: 5
+  cancel-on-move: true
+  cancel-on-damage: false
+  actionbar-every-second: true
+  tick-sound:
+    enabled: true
+    sound: BLOCK_NOTE_BLOCK_HAT
+    volume: 1.0
+    pitch: 1.2
+  complete-sound:
+    enabled: true
+    sound: ENTITY_ENDERMAN_TELEPORT
+    volume: 1.0
+    pitch: 1.0
+
+async:
+  sql-threads: 3

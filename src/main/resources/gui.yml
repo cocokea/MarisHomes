@@ -1,0 +1,64 @@
+# MarisHomes GUI config
+homes-gui:
+  title: '&8ʜᴏᴍᴇs'
+  rows: 4
+  bed-slots: [10, 11, 12, 13, 14, 15, 16]
+  action-slots: [19, 20, 21, 22, 23, 24, 25]
+  filler:
+    enabled: false
+    material: BLACK_STAINED_GLASS_PANE
+    name: ' '
+    lore: []
+  items:
+    bed-set:
+      material: YELLOW_BED
+      name: '&#FFED00ʜᴏᴍᴇ %home%'
+      lore:
+        - '&fClick to teleport to your home'
+    bed-empty:
+      material: GRAY_BED
+      name: '&#BBBBBBɴᴏ ʜᴏᴍᴇ sᴇᴛ'
+      lore:
+        - '&f- Click to save your location'
+    bed-no-permission:
+      material: RED_BED
+      name: '&#FF0000ɴᴏ ᴘᴇʀᴍɪssɪᴏɴ'
+      lore:
+        - '&7Buy &#FFEB00ʀᴀɴᴋ &fin /store for more homes'
+    action-set:
+      material: YELLOW_DYE
+      name: '&#FFED00ʜᴏᴍᴇ %home%'
+      lore:
+        - '&fClick to delete ʜᴏᴍᴇ %home%'
+    action-empty:
+      material: GRAY_DYE
+      name: '&#BBBBBBɴᴏ ʜᴏᴍᴇ sᴇᴛ'
+      lore:
+        - '&f- Click to save your location'
+    action-no-permission:
+      material: RED_DYE
+      name: '&#FF0000ɴᴏ ᴘᴇʀᴍɪssɪᴏɴ'
+      lore:
+        - '&7Buy &#FFEB00ʀᴀɴᴋ &fin /store for more homes'
+
+confirm-delete-gui:
+  title: '&8Confirm Delete'
+  rows: 3
+  reopen-homes-on-esc: true
+  cancel:
+    slot: 11
+    material: RED_STAINED_GLASS_PANE
+    name: '&#FF0000ᴄᴀɴᴄᴇʟ'
+    lore:
+      - '&fClick to cancel'
+  display:
+    slot: 13
+    material: YELLOW_DYE
+    name: '&#FFEB00ʜᴏᴍᴇ %home%'
+    lore: []
+  confirm:
+    slot: 15
+    material: LIME_STAINED_GLASS_PANE
+    name: '&aᴄᴏɴғɪʀᴍ'
+    lore:
+      - '&fClick to delete'

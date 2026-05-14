@@ -1,0 +1,21 @@
+settings:
+  confirm-delete-chat: false
+  confirm-delete-actionbar: true
+
+prefix: '&#FFEB00MarisHomes &8» '
+messages:
+  no-permission: '&#FF0000ɴᴏ ᴘᴇʀᴍɪssɪᴏɴ'
+  player-only: '&cOnly players can use this command.'
+  reload: '%prefix%&7Reloaded config.yml, gui.yml and message.yml.'
+  reload-usage: '&cUse /homeadmin reload'
+  home-not-set: '&cHome not set.'
+  invalid-home: '&cUse a home number from 1 to 7.'
+  no-available-home-slot: '&cNo available home slot.'
+  cannot-set-home-here: '&cYou cannot set home here.'
+  delhome-usage: '&cUse /delhome <1-7>'
+  world-not-found: '&cWorld not found.'
+  teleport-countdown-actionbar: '&7Teleport in &#FFEB00%cooldown%s'
+  teleport-success-chat: '&7You teleported to your home'
+  teleport-success-actionbar: '&7You teleported to your home'
+  teleport-cancelled-moved: '&cTeleport cancelled because you moved.'
+  confirm-delete-again: '&cClick to again to confirm you want to delete this home'

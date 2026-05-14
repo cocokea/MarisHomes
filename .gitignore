@@ -1,0 +1,16 @@
+﻿.gradle/
+build/
+**/build/
+out/
+target/
+.idea/
+.vscode/
+*.iml
+*.class
+*.log
+*.tmp
+hs_err_pid*
+replay_pid*
+run/
+libs/*.jar
+!libs/.gitkeep

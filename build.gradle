@@ -1,0 +1,26 @@
+plugins { id 'java' }
+
+group = 'dev.maris'
+version = '1.0'
+
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(25) }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 25
+}
+
+dependencies {
+    compileOnly 'io.papermc.paper:paper-api:26.1.2.build.+'
+    compileOnly 'com.zaxxer:HikariCP:7.0.2'
+    compileOnly 'org.xerial:sqlite-jdbc:3.53.0.0'
+    compileOnly 'com.mysql:mysql-connector-j:9.7.0'
+}
+
+processResources {
+    filteringCharset = 'UTF-8'
+    filesMatching('plugin.yml') { expand(version: project.version) }
+}
+
