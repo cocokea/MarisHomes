@@ -1,3 +1,5 @@
+update-checker: true
+
 # MarisHomes main config
 # storage.type: sqlite or mysql
 storage:

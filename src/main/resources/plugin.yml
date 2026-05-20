@@ -29,22 +29,22 @@ permissions:
     default: op
   marishomes.1:
     description: Allows using home slot 1
-    default: true
+    default: false
   marishomes.2:
     description: Allows using home slot 2
-    default: true
+    default: false
   marishomes.3:
     description: Allows using home slot 3
-    default: true
+    default: false
   marishomes.4:
     description: Allows using home slot 4
-    default: true
+    default: false
   marishomes.5:
     description: Allows using home slot 5
-    default: true
+    default: false
   marishomes.6:
     description: Allows using home slot 6
-    default: true
+    default: false
   marishomes.7:
     description: Allows using home slot 7
-    default: true
+    default: false

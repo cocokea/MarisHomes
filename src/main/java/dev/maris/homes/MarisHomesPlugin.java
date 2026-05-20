@@ -18,7 +18,10 @@ public final class MarisHomesPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        this.configs = new Configs(this);
+        
+        saveDefaultConfig();
+        MarisPluginStartup.bootstrap(this, "cocokea/MarisHomes");
+this.configs = new Configs(this);
         this.configs.load();
         this.scheduler = new PlatformScheduler(this);
         this.storageManager = new StorageManager(this);
